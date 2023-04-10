@@ -7,14 +7,14 @@ Create a nginx YAML File
   vi nginx-pod.yml
 ```
 ```shell
-apiVersion: V1
+apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod 
 spec:
   containers:
   - name: nginx
-  image: ngnix
+  image: nginx
   ports:
   - containerPort: 80
 ```
