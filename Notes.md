@@ -1,4 +1,3 @@
-
 # Basics Of Kubernetes
 
 ## Containers
@@ -69,3 +68,48 @@ In simple it helps us to interact with kubernetes from command line.
 It works primarly by allowing you to view, create, modify, and delete kubernetes objects.
 
 kubectl communicates with Kubernetes API to carry out commands 
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/KubectlBasics.md) for viewing basic kubectl commands
+
+## Pod
+A pod is a group of one or more containers with shared storage and network resources, and a specification for how to run containers
+
+In other words, A pod is a kubernetes object that allows us to run containers in cluster. A pod can run more than one container, But it has to run atleast one container and if it runs more than one container these containers do need to be closely connected and actually share some resources 
+
+It is always preferred to run two containersin seperate pods unless there is an exclusive case to run two containers in same pod.
+## Pod specification Basics
+Sample YAML file
+```shell
+apiVersion: V1
+kind: Pod
+metadata:
+  name: ngnix-pod 
+spec:
+- name: nginx
+  image: ngnix
+```
+`kind` - specifies the object type as Pod.
+
+`metadata.name` - the name of the Pod object
+
+`spec.containers` - provides a list of one or more containers included in Pod.
+
+`spec.container[].image` - specifiesthe name of a container image containing the software you want to run.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/PodContainers.md) for viewing Managing Containers with Pods.
+# Kubernetes in CLoud
+Many cloud providers offer `Managed Kubernetes `Platforms, allowing to spin up a cluster with a few clicks
+## Kubernetes on AWS 
+` Amazon EKS(Elastic Kubernetes Service) ` allows to run applications on a managed kubernetes infrastructure and it's an on demand service
+
+`Amazon EC2` are just VMs that run in AWS but we can use EC2 machines to install Kubernetes and setup own kubernetes cluster.These helps to customize kubernetes than AWS EKS.
+
+`Amazon ECR(Elastic Container Registry) `It is a place to safely securely store and manage container images that run in kubernetes
+
+## Azure Kubernetes Service (AKS)
+`AKS` provides a managed kubernetes Platform within Microsoft Azure.
+
+`AKS` can integrate with Azure's continous integration/continous delivery (CI/CD) features.
+
+## Google Kubernetes Engine (GKE)
+ `GKE` includes some useful feature for high availability, such as multi-zone and regional clusters.
