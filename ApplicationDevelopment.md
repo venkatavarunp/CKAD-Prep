@@ -71,4 +71,33 @@ We have two types of volumes in Kubernetes
 | Defines the details of how and where the external data is stored | Defines the path where the volume data will appear at runtime | 
 | N/A | Attaches that volume that's defined at Pod specification level to a specific container within the pod |
 
-### Volume Types
+## Volume Types
+The volume type determines where and how data storage is handled.
+### 1. hostPath
+Data is stored in a specific location directly on the  `host file system`, onn the directory on the Kubernetes node where pod is running.
+
+`hostPath` stores data in specific location and you can actuallt access the host data from inside of a container.
+### 2. emptyDir
+Data is stored in an `automatically managed` location on the host file system. 
+
+In a `emptyDir` data is automatically managed and data is deleted if the Pod is deleted
+
+`emptyDir` is technically using the host file system to store the data, and act as a temporary storage location like `RAM`
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to check some Pods that use `hostPath`, `emptyDir` volumes .
+### 3. persistentVolumeClaim (PVC)
+allows you to mount data to a container that's ultimately stored in persistentVolume
+
+### persistentVolume (PV)
+A persistentVolume allows to abstract volume storage details away from pods and treat storage like a consumable resource.
+
+| persistentVolume | persistentVolumeClaim | 
+| :-------- | :------- | 
+| Defines an abstract storage resource ready to be consumed by pods. | Defines a request for storage, including details on the `type` of storage needed | 
+| Defines details about  `type` and `amount` of `storage` provided. | Automatically binds to an available persistentVolume that meets the provided requirements | 
+| It is storage that's available | It is storage that is needed |
+|N/A|Mounted in a pod like any volume |
+
+` persistentVolumeClaim` (PVC)  automatically `bind` to a `persistentVolume` (PV) that meets their criteria.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to check some Pods that uses a `persistentVolume`
