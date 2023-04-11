@@ -47,3 +47,28 @@ Use multi-container pods only when the containers need to be tightly coupled, sh
 It is always prefered to run multiple containers in pods untill or unless they are needed to run in same pods as per above case.
 
 [Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/MultiContainerPods.md) to checkout steps to create a Multi-Container Pods.
+
+## Init containers
+An init container is a container that runs to complete a task before a Pod's main container starts up.
+
+So an init Container doesn't run on an ongoing basis like a web server.
+
+It runs, it performs its tasks and stops running, and only once the init container stops running and main container proceeds to actually startup.
+
+### Why init containers ?
+- Seperate image (It uses a seperate image to perform startup tasks using software that main container doesn't include or needed)
+- Delay Startup (can delay startup of main container until certain preconditions are met)
+- Security (Can perform Sensitive startup steps like consuming secrets,in isolation from main container)
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to checkout steps to create a init container.
+## Volumes
+A volume provides external storage for containers outside the container file system.
+
+We have two types of volumes in Kubernetes
+
+| volume | volumeMount     | 
+| :-------- | :------- | 
+| Defined in Pod Specifications (spec)      | Defined in containers Specifications (spec) | 
+| Defines the details of how and where the external data is stored | Defines the path where the volume data will appear at runtime | 
+| N/A | Attaches that volume that's defined at Pod specification level to a specific container within the pod |
+
+### Volume Types
