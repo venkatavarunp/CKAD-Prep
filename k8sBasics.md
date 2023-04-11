@@ -1,3 +1,8 @@
+# Documentation allowed for CKAD exam
+- [Kubernetes Docs](https://kubernetes.io/docs)
+- [Kubernetes GitHub](https://github.com/kubernetes/)
+- [Kubernetes Blog](https://kubernetes.io/blog/)
+- [Helm Docs](https://helm.sh/docs/)
 # Basics Of Kubernetes
 
 ## Containers
