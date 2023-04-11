@@ -10,7 +10,7 @@ Once you package your application into an `image` you can use it to run any numb
 - A `Dockerfile` defines what is contained in that image
 - the `docker build` command builds an image using the `Dockerfile`.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ContainerImageDev.md) to checkout steps to install Docker and create own image using Kubernetes.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/ContainerImageDev.md) to checkout steps to install Docker and create own image using Kubernetes.
 ## Running Jobs and CronJobs
 ### Kubernetes Job 
 Kubernetes Jobs are essentially objects that are designed to run a containerized task succesfully to completion
@@ -23,7 +23,7 @@ CronJob runs Job periodically according to a schedule
 - If you want to run a task once , you can use Job
 - If you want to run a task every minute/hour/Day or according to any type of schedule , you can use a CronJobs
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/JobsCronJobs.md) to checkout steps to create a Job and CronJob.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/JobsCronJobs.md) to checkout steps to create a Job and CronJob.
 
 ## Building Multi-Container Pods
 Multi-Container Pods are pods that include multiple containers that work together.
@@ -48,7 +48,7 @@ Example : if the main container outputs some log data to the container log in a 
 Use multi-container pods only when the containers need to be tightly coupled, sharing resources such as network and storage volumes.
 It is always prefered to run multiple containers in pods untill or unless they are needed to run in same pods as per above case.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/MultiContainerPods.md) to checkout steps to create a Multi-Container Pods.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/MultiContainerPods.md) to checkout steps to create a Multi-Container Pods.
 
 ## Init containers
 An init container is a container that runs to complete a task before a Pod's main container starts up.
@@ -62,7 +62,7 @@ It runs, it performs its tasks and stops running, and only once the init contain
 - Delay Startup (can delay startup of main container until certain preconditions are met)
 - Security (Can perform Sensitive startup steps like consuming secrets,in isolation from main container)
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to checkout steps to create a init container.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/InitContainer.md) to checkout steps to create a init container.
 ## Volumes
 A volume provides external storage for containers outside the container file system.
 
@@ -87,7 +87,7 @@ In a `emptyDir` data is automatically managed and data is deleted if the Pod is 
 
 `emptyDir` is technically using the host file system to store the data, and act as a temporary storage location like `RAM`
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to check some Pods that use `hostPath`, `emptyDir` volumes .
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/Volumes.md) to check some Pods that use `hostPath`, `emptyDir` volumes .
 ### 3. persistentVolumeClaim (PVC)
 allows you to mount data to a container that's ultimately stored in persistentVolume
 
@@ -103,4 +103,4 @@ A persistentVolume allows to abstract volume storage details away from pods and 
 
 ` persistentVolumeClaim` (PVC)  automatically `bind` to a `persistentVolume` (PV) that meets their criteria.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to check some Pods that uses a `persistentVolume`
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDevelopment/Labs/persistentVolume.md) to check some Pods that uses a `persistentVolume`
