@@ -44,7 +44,7 @@ The core of Kubernetes control plane is the API server
 - Central point of communication ( Various components of Kubernetes communicate with each other using the API)
 The API acts as the Interface between users and clusters.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/KubernetesCluster.md) for more information about for Kubernetes API
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/KubernetesAPI.md) for more information about for Kubernetes API
 ## Kubernetes Objects
 Kubernetes Objects are persistent dat entites stored by Kubernetes.They represent the state of the cluster
 We can deploy and configure applications, run containers, and configure cluster behavior by creating, modifying, and deleting objects and all this happens through `Kubernetes API`.
