@@ -9,6 +9,7 @@ Once you package your application into an `image` you can use it to run any numb
 `Docker` is one of the tool that can be used to create own images.
 - A `Dockerfile` defines what is contained in that image
 - the `docker build` command builds an image using the `Dockerfile`.
+
 [Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ContainerImageDev.md) to checkout steps to install Docker and create own image using Kubernetes.
 ## Running Jobs and CronJobs
 ### Kubernetes Job 
@@ -21,6 +22,7 @@ CronJob runs Job periodically according to a schedule
 
 - If you want to run a task once , you can use Job
 - If you want to run a task every minute/hour/Day or according to any type of schedule , you can use a CronJobs
+
 [Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/JobsCronJobs.md) to checkout steps to create a Job and CronJob.
 
 ## Building Multi-Container Pods
@@ -59,6 +61,7 @@ It runs, it performs its tasks and stops running, and only once the init contain
 - Seperate image (It uses a seperate image to perform startup tasks using software that main container doesn't include or needed)
 - Delay Startup (can delay startup of main container until certain preconditions are met)
 - Security (Can perform Sensitive startup steps like consuming secrets,in isolation from main container)
+
 [Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/InitContainer.md) to checkout steps to create a init container.
 ## Volumes
 A volume provides external storage for containers outside the container file system.
