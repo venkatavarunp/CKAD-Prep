@@ -34,7 +34,7 @@ It is a Kubernetes agent that runs on each node and manages Kubernetes activity 
 ## Kubeadm
 Kubeadm is a tool that will simplify the process of setting up our Kubernetes cluster.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/KubernetesCluster.md) for Building a Kubernetes 1.24 Cluster with kubeadm.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/KubernetesCluster.md) for Building a Kubernetes 1.24 Cluster with kubeadm.
 
 
 ## The Kubernetes API
@@ -44,7 +44,7 @@ The core of Kubernetes control plane is the API server
 - Central point of communication ( Various components of Kubernetes communicate with each other using the API)
 The API acts as the Interface between users and clusters.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/KubernetesCluster.md) for more information about for Kubernetes API
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/KubernetesCluster.md) for more information about for Kubernetes API
 ## Kubernetes Objects
 Kubernetes Objects are persistent dat entites stored by Kubernetes.They represent the state of the cluster
 We can deploy and configure applications, run containers, and configure cluster behavior by creating, modifying, and deleting objects and all this happens through `Kubernetes API`.
@@ -74,7 +74,7 @@ It works primarly by allowing you to view, create, modify, and delete kubernetes
 
 kubectl communicates with Kubernetes API to carry out commands 
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/KubectlBasics.md) for viewing basic kubectl commands
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/KubectlBasics.md) for viewing basic kubectl commands
 
 ## Pod
 A pod is a group of one or more containers with shared storage and network resources, and a specification for how to run containers
@@ -101,7 +101,7 @@ spec:
 
 `spec.container[].image` - specifiesthe name of a container image containing the software you want to run.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/PodContainers.md) for viewing Managing Containers with Pods.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/Basics/Labs/PodContainers.md) for viewing Managing Containers with Pods.
 # Kubernetes in CLoud
 Many cloud providers offer `Managed Kubernetes `Platforms, allowing to spin up a cluster with a few clicks
 ## Kubernetes on AWS 
