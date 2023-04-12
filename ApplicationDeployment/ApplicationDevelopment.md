@@ -25,7 +25,7 @@ kubernetes gets to the desired state by updating the replicas to reflect that in
 
 kubernetes doesn't delete all replicas at once instead it gradually spins up new replicas and gradually remove the old replicas as the new ones become available.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/Scaling.md) to know how to roll updates in kubernetes.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/RollingUpdates.md) to know how to roll updates in kubernetes.
 
 ## Deploying with Blue/Green and Canary Stratergies
 
