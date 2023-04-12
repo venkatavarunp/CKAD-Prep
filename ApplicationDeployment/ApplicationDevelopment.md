@@ -27,4 +27,32 @@ kubernetes doesn't delete all replicas at once instead it gradually spins up new
 
 [Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/Scaling.md) to know how to roll updates in kubernetes.
 
-## Deploying with Blue?Green and Canary Stratergies
+## Deploying with Blue/Green and Canary Stratergies
+
+### Deployment Stratergy 
+A deployment stratergy is a method of rolling out new code that is used to achieve some benefit, such as increasing reliability and minimizing risk.
+
+There are two deployment stratergies 
+
+### 1. Blue/Green Deployment
+A Blue/Green deployment stratergy involves using 2 identical production environments, usually called blue and green.
+
+when we want to rollout new code, the new code is rolled out to the second environment. This environment is confirmed to be stable and working before user traffic is directed to the new environment.
+
+### 2. Canary Deployment
+Just like blue/green, a Canary deployment stratergy uses 2 environment.
+
+Unlike Blue/Green a `portion` of the user base is directed to the new code in order to expose any issues before the changes are rolled out to everyone else.
+
+We use small portion of user base to test to the new environment and if everything is fine we direct all of the users to updataed new production environment . It acts as a `beta` version.
+
+- Using`labels` and `selectors` on services helps to direct user traffic to different Pods.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/DeploymentStratergies.md) to see how Deployment stratergies work. 
+
+## Helm
+Helm is a pcakage management tool for applications that runs in kubernetes. It allows you to easily install software in your cluster, alongside the neccessary kubernetes configuration.
+
+When we setup an application, we create `YAML` files for deployments and services, and a lot of different kubernetes objects.
+
+`Helm` allows us to take all that configuration put it in 1 pcakage and install applications in clusters that consists multiple different kubernetes objects with a single command.
