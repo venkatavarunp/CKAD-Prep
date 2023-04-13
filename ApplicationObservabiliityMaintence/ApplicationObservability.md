@@ -41,4 +41,53 @@ Startup probes are a special case designed for slow starting containers that tak
 These are `Liveness` that are only active during that slow startup time.
 the purpose of `startup` is to prevent the container being considered unhealthy during that long startup times.
 
-[Click here] (https://github.com/venkatavarunp/CKAD-Prep/new/main)
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationObservabiliityMaintence//Labs/Probes.md) to see Implement Probes and Health Checks.
+
+## Monitoring
+
+Monitoring is thr process of gathering data(metrics) about the performance of containerized applications.
+
+### Steps to Access Data with the Metrics API
+1. **Install `Metrics Server`**
+`Metrics Server` is a component that gathers the metric data so that we can access it. Without Metrics Server, Metrics API won't peovide any data.
+
+2. **Access Metric data** 
+we can access the metric data using `kubectl top` command.
+
+We can also montior the kubernetes data using external tools.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationObservabiliityMaintence//Labs/MonitorApp.md) to see how to Monitoring Kubernetes Applications.
+
+## Container Logging
+
+Kubernetes stores the `stdout/stderr` console output for each container in the `container log`.
+
+We can view these logs using 
+```shell 
+kubectl logs <Pod Name>
+```
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationObservabiliityMaintence//Labs/Logs.md) to see how to Monitor logs.
+
+## Debugging in Kubernetes
+
+### Debugging Process 
+1. `Locate` 
+Locate the problem and identify which component may not be working
+
+2. `Gather Info`
+Gather additional information about the broken components to help determine what exactly is wrong.
+
+3. `Fix`
+Make changes to fix based on the information gathered.
+
+### Tips for debugging in Kubernetes
+1. **Check Object Status**
+check the basic status of objects by looking at status of the pod by running `kubectl get pods` command. This can be a quick way to locate broken poid in the cluster.
+
+2. **Check Object Configuration**
+we can use `kubectl describe` and/or view full object manifest to understand the relevant object(s) in more detail.
+
+3. **Check Logs**
+we can check container and cluster level logs, for more insights on what is going on.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationObservabiliityMaintence//Labs/Debugging.md) to check an example for Debugging of kubernetes cluster.
