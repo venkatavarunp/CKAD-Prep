@@ -25,7 +25,7 @@ kubernetes gets to the desired state by updating the replicas to reflect that in
 
 kubernetes doesn't delete all replicas at once instead it gradually spins up new replicas and gradually remove the old replicas as the new ones become available.
 
-[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/RollingUpdates.md) to know how to roll updates in kubernetes.
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/Scaling.md) to know how to roll updates in kubernetes.
 
 ## Deploying with Blue/Green and Canary Stratergies
 
@@ -56,3 +56,15 @@ Helm is a pcakage management tool for applications that runs in kubernetes. It a
 When we setup an application, we create `YAML` files for deployments and services, and a lot of different kubernetes objects.
 
 `Helm` allows us to take all that configuration put it in 1 pcakage and install applications in clusters that consists multiple different kubernetes objects with a single command.
+
+## Helm Charts
+A helm chart is a helm software package. it contains all of the kubernetes resource definitions needed to get the application up and running in the cluster.
+
+The resource definition are the same thing as the `YAML` files inorder to create different objects like Pods, deployments, and services.
+
+In order to install helm chart we need to interact with `helm repository`
+
+## Helm repository
+A helm repository is a collection of available charts. we can use it to browse and download charts before installing them in the cluster.
+
+[Click here](https://github.com/venkatavarunp/CKAD-Prep/blob/main/ApplicationDeployment/Labs/Helm.md) to see how helm works using charts and repository.
