@@ -28,6 +28,11 @@ runAsGroup: 4000
 allowPrivilegeEscalation: false
 readOnlyRootFilesystem: true
 ```
+We can set the continer's UID and GID with `securityContext.runAsUser` and `securityContext.runAsGroup`.
+
+We can enable or disable privilege escalation with `securityContext.allowPrivilegeEscalation`.
+
+We can make the container root filesystem read-only with `securityContext.readOnlyRootFilesystem`.
 ```shell
 kubectl apply -f securitycontext-pod.yml
 ```
